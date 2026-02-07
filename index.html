@@ -67,8 +67,7 @@
         .clips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .clip-card { background: linear-gradient(135deg, rgba(168, 139, 250, 0.05), rgba(96, 165, 250, 0.05)); border: 1px solid rgba(168, 139, 250, 0.2); border-radius: 12px; overflow: hidden; transition: all 0.3s; }
         .clip-card:hover { transform: translateY(-8px); border-color: rgba(168, 139, 250, 0.5); box-shadow: 0 20px 40px rgba(168, 139, 250, 0.15); }
-        .clip-thumbnail { position: relative; width: 100%; padding-bottom: 56.25%; background: linear-gradient(135deg, rgba(168, 139, 250, 0.2), rgba(96, 165, 250, 0.2)); overflow: hidden; }
-        .clip-thumbnail img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .clip-thumbnail { position: relative; width: 100%; padding-bottom: 56.25%; background: linear-gradient(135deg, rgba(168, 139, 250, 0.2), rgba(96, 165, 250, 0.2)); overflow: hidden; background-size: cover; background-position: center; }
         .clip-thumbnail a { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 10; }
         .clip-link { font-size: 48px; color: #a78bfa; transition: all 0.3s; }
         .clip-link:hover { font-size: 56px; color: #60a5fa; }
@@ -79,7 +78,8 @@
         .schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
         .schedule-card { background: linear-gradient(135deg, rgba(168, 139, 250, 0.1), rgba(96, 165, 250, 0.1)); border: 2px solid rgba(168, 139, 250, 0.3); border-radius: 12px; padding: 30px; text-align: center; transition: all 0.3s; }
         .schedule-card:hover { border-color: rgba(168, 139, 250, 0.6); transform: translateY(-5px); box-shadow: 0 15px 35px rgba(168, 139, 250, 0.2); }
-        .schedule-day { font-size: 24px; font-weight: 700; color: #a78bfa; margin-bottom: 15px; }
+        .schedule-emoji { font-size: 48px; margin-bottom: 15px; display: block; line-height: 1; }
+        .schedule-region { font-size: 20px; font-weight: 700; color: #a78bfa; margin-bottom: 10px; }
         .schedule-time { font-size: 18px; color: #f1f5f9; font-weight: 600; margin-bottom: 10px; }
         .schedule-note { font-size: 14px; color: #94a3b8; }
         
@@ -222,8 +222,7 @@
             <p style="text-align: center; color: #cbd5e1; margin-bottom: 50px; font-size: 18px;">Revisa los momentos más épicos y memorables de nuestros streams</p>
             <div class="clips-grid">
                 <div class="clip-card">
-                    <div class="clip-thumbnail">
-                        <img src="https://clips.twitch.tv/SassyCarefulSaladDerp-cA0QnBJ42uABajOB/download/480.jpg" alt="¡Vamos DaiZyujin!" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                    <div class="clip-thumbnail" style="background: linear-gradient(135deg, rgba(168, 139, 250, 0.3), rgba(96, 165, 250, 0.3)); background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663318260232/jalexy_nuzlocke_pokemon.png'); background-size: cover; background-position: center;">
                         <a href="https://www.twitch.tv/jalexy325/clip/SassyCarefulSaladDerp-cA0QnBJ42uABajOB" target="_blank" class="clip-link">
                             <i class="fas fa-play"></i>
                         </a>
@@ -233,8 +232,7 @@
                     <a href="https://www.twitch.tv/jalexy325/clip/SassyCarefulSaladDerp-cA0QnBJ42uABajOB" target="_blank" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">Ver Clip</a>
                 </div>
                 <div class="clip-card">
-                    <div class="clip-thumbnail">
-                        <img src="https://clips.twitch.tv/PiercingCoweringSquirrelAMPTropPunch-2rdhRuLMU-Ky4Zak/download/480.jpg" alt="Y luego dice que no le salen shinies" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                    <div class="clip-thumbnail" style="background: linear-gradient(135deg, rgba(168, 139, 250, 0.3), rgba(96, 165, 250, 0.3)); background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663318260232/jalexy_gaming_setup.png'); background-size: cover; background-position: center;">
                         <a href="https://www.twitch.tv/jalexy325/clip/PiercingCoweringSquirrelAMPTropPunch-2rdhRuLMU-Ky4Zak" target="_blank" class="clip-link">
                             <i class="fas fa-play"></i>
                         </a>
@@ -244,8 +242,7 @@
                     <a href="https://www.twitch.tv/jalexy325/clip/PiercingCoweringSquirrelAMPTropPunch-2rdhRuLMU-Ky4Zak" target="_blank" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">Ver Clip</a>
                 </div>
                 <div class="clip-card">
-                    <div class="clip-thumbnail">
-                        <img src="https://static-cdn.jtvnw.net/cf_vods/d3aqoihi2n8ty8.cloudfront.net/tps.jpg" alt="El Shiny que no lo parece" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
+                    <div class="clip-thumbnail" style="background: linear-gradient(135deg, rgba(168, 139, 250, 0.3), rgba(96, 165, 250, 0.3)); background-image: url('https://files.manuscdn.com/user_upload_by_module/session_file/310519663318260232/jalexy_comunidad_gaming.png'); background-size: cover; background-position: center;">
                         <a href="https://www.twitch.tv/jalexy325/clip/SassyCarefulSaladDerp-cA0QnBJ42uABajOB" target="_blank" class="clip-link">
                             <i class="fas fa-play"></i>
                         </a>
@@ -265,22 +262,26 @@
             <p style="text-align: center; color: #cbd5e1; margin-bottom: 50px; font-size: 18px;">¡Sígueme en vivo! Aquí está mi horario de transmisiones</p>
             <div class="schedule-grid">
                 <div class="schedule-card">
-                    <div class="schedule-day"><span style="font-size: 32px; display: block; margin-bottom: 10px;">🇨🇴</span> Colombia (COT)</div>
+                    <div class="schedule-day schedule-emoji">🇨🇴</div>
+                    <div class="schedule-region">Colombia (COT)</div>
                     <div class="schedule-time">Sábados 6:15 PM - 8:00 PM</div>
                     <div class="schedule-note">Horario principal</div>
                 </div>
                 <div class="schedule-card">
-                    <div class="schedule-day"><span style="font-size: 32px; display: block; margin-bottom: 10px;">🌍</span> UTC</div>
+                    <div class="schedule-day schedule-emoji">🌍</div>
+                    <div class="schedule-region">UTC</div>
                     <div class="schedule-time">Sábados 11:15 PM - 1:00 AM</div>
                     <div class="schedule-note">Hora universal</div>
                 </div>
                 <div class="schedule-card">
-                    <div class="schedule-day"><span style="font-size: 32px; display: block; margin-bottom: 10px;">🇺🇸</span> EST</div>
+                    <div class="schedule-day schedule-emoji">🇺🇸</div>
+                    <div class="schedule-region">EST</div>
                     <div class="schedule-time">Sábados 6:15 PM - 8:00 PM</div>
                     <div class="schedule-note">Hora de Nueva York</div>
                 </div>
                 <div class="schedule-card">
-                    <div class="schedule-day"><span style="font-size: 32px; display: block; margin-bottom: 10px;">🇪🇺</span> CET</div>
+                    <div class="schedule-day schedule-emoji">🇪🇺</div>
+                    <div class="schedule-region">CET</div>
                     <div class="schedule-time">Domingos 12:15 AM - 2:00 AM</div>
                     <div class="schedule-note">Hora de Europa Central</div>
                 </div>
