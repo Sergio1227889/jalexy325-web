@@ -68,7 +68,8 @@
         .clip-card { background: linear-gradient(135deg, rgba(168, 139, 250, 0.05), rgba(96, 165, 250, 0.05)); border: 1px solid rgba(168, 139, 250, 0.2); border-radius: 12px; overflow: hidden; transition: all 0.3s; }
         .clip-card:hover { transform: translateY(-8px); border-color: rgba(168, 139, 250, 0.5); box-shadow: 0 20px 40px rgba(168, 139, 250, 0.15); }
         .clip-thumbnail { position: relative; width: 100%; padding-bottom: 56.25%; background: linear-gradient(135deg, rgba(168, 139, 250, 0.2), rgba(96, 165, 250, 0.2)); overflow: hidden; }
-        .clip-thumbnail a { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+        .clip-thumbnail img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+        .clip-thumbnail a { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; z-index: 10; }
         .clip-link { font-size: 48px; color: #a78bfa; transition: all 0.3s; }
         .clip-link:hover { font-size: 56px; color: #60a5fa; }
         .clip-card h3 { font-size: 20px; color: #f1f5f9; padding: 20px 20px 10px; font-weight: 600; }
@@ -222,6 +223,7 @@
             <div class="clips-grid">
                 <div class="clip-card">
                     <div class="clip-thumbnail">
+                        <img src="https://clips.twitch.tv/SassyCarefulSaladDerp-cA0QnBJ42uABajOB/download/480.jpg" alt="¡Vamos DaiZyujin!" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
                         <a href="https://www.twitch.tv/jalexy325/clip/SassyCarefulSaladDerp-cA0QnBJ42uABajOB" target="_blank" class="clip-link">
                             <i class="fas fa-play"></i>
                         </a>
@@ -232,6 +234,7 @@
                 </div>
                 <div class="clip-card">
                     <div class="clip-thumbnail">
+                        <img src="https://clips.twitch.tv/PiercingCoweringSquirrelAMPTropPunch-2rdhRuLMU-Ky4Zak/download/480.jpg" alt="Y luego dice que no le salen shinies" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
                         <a href="https://www.twitch.tv/jalexy325/clip/PiercingCoweringSquirrelAMPTropPunch-2rdhRuLMU-Ky4Zak" target="_blank" class="clip-link">
                             <i class="fas fa-play"></i>
                         </a>
@@ -242,6 +245,7 @@
                 </div>
                 <div class="clip-card">
                     <div class="clip-thumbnail">
+                        <img src="https://static-cdn.jtvnw.net/cf_vods/d3aqoihi2n8ty8.cloudfront.net/tps.jpg" alt="El Shiny que no lo parece" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;">
                         <a href="https://www.twitch.tv/jalexy325/clip/SassyCarefulSaladDerp-cA0QnBJ42uABajOB" target="_blank" class="clip-link">
                             <i class="fas fa-play"></i>
                         </a>
@@ -261,22 +265,22 @@
             <p style="text-align: center; color: #cbd5e1; margin-bottom: 50px; font-size: 18px;">¡Sígueme en vivo! Aquí está mi horario de transmisiones</p>
             <div class="schedule-grid">
                 <div class="schedule-card">
-                    <div class="schedule-day">🇪🇸 Colombia (COT)</div>
+                    <div class="schedule-day"><span style="font-size: 32px; display: block; margin-bottom: 10px;">🇨🇴</span> Colombia (COT)</div>
                     <div class="schedule-time">Sábados 6:15 PM - 8:00 PM</div>
                     <div class="schedule-note">Horario principal</div>
                 </div>
                 <div class="schedule-card">
-                    <div class="schedule-day">🌍 UTC</div>
+                    <div class="schedule-day"><span style="font-size: 32px; display: block; margin-bottom: 10px;">🌍</span> UTC</div>
                     <div class="schedule-time">Sábados 11:15 PM - 1:00 AM</div>
                     <div class="schedule-note">Hora universal</div>
                 </div>
                 <div class="schedule-card">
-                    <div class="schedule-day">🇺🇸 EST</div>
+                    <div class="schedule-day"><span style="font-size: 32px; display: block; margin-bottom: 10px;">🇺🇸</span> EST</div>
                     <div class="schedule-time">Sábados 6:15 PM - 8:00 PM</div>
                     <div class="schedule-note">Hora de Nueva York</div>
                 </div>
                 <div class="schedule-card">
-                    <div class="schedule-day">🇪🇺 CET</div>
+                    <div class="schedule-day"><span style="font-size: 32px; display: block; margin-bottom: 10px;">🇪🇺</span> CET</div>
                     <div class="schedule-time">Domingos 12:15 AM - 2:00 AM</div>
                     <div class="schedule-note">Hora de Europa Central</div>
                 </div>
