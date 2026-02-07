@@ -83,6 +83,41 @@
         .schedule-time { font-size: 18px; color: #f1f5f9; font-weight: 600; margin-bottom: 10px; }
         .schedule-note { font-size: 14px; color: #94a3b8; }
         
+        /* Events Grid */
+        .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .event-card { background: linear-gradient(135deg, rgba(168, 139, 250, 0.05), rgba(96, 165, 250, 0.05)); border: 1px solid rgba(168, 139, 250, 0.2); border-radius: 12px; overflow: hidden; transition: all 0.3s; }
+        .event-card:hover { transform: translateY(-8px); border-color: rgba(168, 139, 250, 0.5); box-shadow: 0 20px 40px rgba(168, 139, 250, 0.15); }
+        .event-date { background: linear-gradient(135deg, #a78bfa, #60a5fa); color: white; padding: 15px; text-align: center; font-weight: 700; font-size: 14px; }
+        .event-content { padding: 20px; }
+        .event-content h3 { font-size: 20px; color: #f1f5f9; margin-bottom: 10px; font-weight: 600; }
+        .event-content p { font-size: 14px; color: #cbd5e1; margin-bottom: 15px; }
+        
+        /* Getting Started */
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px; }
+        .step-card { background: linear-gradient(135deg, rgba(168, 139, 250, 0.1), rgba(96, 165, 250, 0.1)); border: 2px solid rgba(168, 139, 250, 0.3); border-radius: 12px; padding: 30px; text-align: center; transition: all 0.3s; position: relative; }
+        .step-card:hover { border-color: rgba(168, 139, 250, 0.6); transform: translateY(-5px); }
+        .step-number { font-size: 48px; font-weight: 900; background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 15px; }
+        .step-card h3 { font-size: 22px; color: #f1f5f9; margin-bottom: 15px; font-weight: 600; }
+        .step-card p { font-size: 14px; color: #cbd5e1; line-height: 1.8; }
+        
+        /* Newsletter */
+        .newsletter-container { background: linear-gradient(135deg, rgba(168, 139, 250, 0.15), rgba(96, 165, 250, 0.1)); border: 2px solid rgba(168, 139, 250, 0.3); border-radius: 12px; padding: 50px 40px; text-align: center; max-width: 600px; margin: 0 auto; }
+        .newsletter-container h3 { font-size: 28px; color: #f1f5f9; margin-bottom: 15px; font-weight: 700; }
+        .newsletter-container p { font-size: 16px; color: #cbd5e1; margin-bottom: 30px; line-height: 1.8; }
+        .newsletter-form { display: flex; gap: 10px; margin-bottom: 15px; flex-wrap: wrap; justify-content: center; }
+        .newsletter-form input { flex: 1; min-width: 250px; padding: 12px 20px; background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(168, 139, 250, 0.3); border-radius: 8px; color: #f1f5f9; font-size: 14px; }
+        .newsletter-form input::placeholder { color: #94a3b8; }
+        .newsletter-form input:focus { outline: none; border-color: rgba(168, 139, 250, 0.6); }
+        .newsletter-form button { padding: 12px 30px; background: linear-gradient(135deg, #a78bfa, #60a5fa); color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s; }
+        .newsletter-form button:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(168, 139, 250, 0.4); }
+        .newsletter-note { font-size: 12px; color: #94a3b8; }
+        
+        /* Support Section */
+        .support-container { background: linear-gradient(135deg, rgba(168, 139, 250, 0.15), rgba(96, 165, 250, 0.1)); border: 2px solid rgba(168, 139, 250, 0.3); border-radius: 12px; padding: 50px 40px; text-align: center; }
+        .support-container h3 { font-size: 28px; color: #f1f5f9; margin-bottom: 20px; font-weight: 700; }
+        .coming-soon { font-size: 18px; color: #a78bfa; font-weight: 600; margin-bottom: 15px; }
+        .support-container p { font-size: 16px; color: #cbd5e1; line-height: 1.8; }
+        
         /* Social */
         .social-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
         .social-btn { background: linear-gradient(135deg, rgba(168, 139, 250, 0.15), rgba(96, 165, 250, 0.1)); border: 1px solid rgba(168, 139, 250, 0.3); color: #a78bfa; padding: 15px 30px; border-radius: 8px; text-decoration: none; transition: all 0.3s; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; }
@@ -120,6 +155,8 @@
                 <a href="#especialidades">Especialidades</a>
                 <a href="#clips">Clips</a>
                 <a href="#horario">Horario</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#empezar">Cómo Empezar</a>
                 <a href="#sobre-mi">Sobre Mí</a>
                 <a href="#comunidad">Comunidad</a>
                 <a href="https://www.twitch.tv/jalexy325" target="_blank" class="btn"><i class="fab fa-twitch"></i> Sígueme</a>
@@ -383,6 +420,93 @@
                 <a href="https://www.twitch.tv/jalexy325" target="_blank" class="social-btn"><i class="fab fa-twitch"></i> Twitch</a>
                 <a href="https://www.tiktok.com/@jalexy_325" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i> TikTok</a>
                 <a href="https://www.youtube.com/@jalexy325" target="_blank" class="social-btn"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eventos Especiales -->
+    <section id="eventos">
+        <div class="container">
+            <h2>🎉 Eventos Especiales</h2>
+            <p style="text-align: center; color: #cbd5e1; margin-bottom: 50px; font-size: 18px;">Momentos épicos y colaboraciones que marcaron historia</p>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">Febrero 2026</div>
+                    <div class="event-content">
+                        <h3>Maratón de Nuzlocke</h3>
+                        <p>24 horas de puro Pokémon Nuzlocke. Desafíos intensos, momentos épicos y la comunidad en vivo apoyando cada batalla.</p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">Enero 2026</div>
+                    <div class="event-content">
+                        <h3>Colaboración Minecraft</h3>
+                        <p>Stream especial con otros creadores. Construimos un mundo épico juntos y la comunidad votó en cada decisión.</p>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">Diciembre 2025</div>
+                    <div class="event-content">
+                        <h3>Torneo de Fortnite</h3>
+                        <p>Competencia amigable entre miembros de La Guarida. Premios, emoción y momentos memorables para todos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Empezar -->
+    <section id="empezar">
+        <div class="container">
+            <h2>🚀 Cómo Empezar en La Guarida</h2>
+            <p style="text-align: center; color: #cbd5e1; margin-bottom: 50px; font-size: 18px;">Guía rápida para nuevos miembros de nuestra comunidad</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Sigue el Canal</h3>
+                    <p>Haz clic en "Seguir" en Twitch para recibir notificaciones cuando vaya en vivo. No te pierdas ningún stream.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Únetea al Chat</h3>
+                    <p>Participa en el chat durante los streams. Saluda, comenta, interactúa. La comunidad es lo más importante.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Respeta los Valores</h3>
+                    <p>Autenticidad, Respeto y Pasión. Estos son nuestros pilares. Todos somos bienvenidos en La Guarida.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Conecta en Redes</h3>
+                    <p>Sigue en TikTok, YouTube e Instagram. Contenido exclusivo, clips y momentos que no puedes perderte.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apoyo -->
+    <section>
+        <div class="container">
+            <div class="support-container">
+                <h3>👋 Apoya el Canal</h3>
+                <div class="coming-soon">Próximamente</div>
+                <p>Muy pronto podrás apoyar el canal a través de diferentes opciones. Esto nos ayudará a crecer y ofrecer contenido aún mejor.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section>
+        <div class="container">
+            <div class="newsletter-container">
+                <h3>📧 Súscribete a Nuestro Newsletter</h3>
+                <p>Recibe actualizaciones exclusivas, anuncios de streams especiales y contenido que no verás en ningún otro lugar.</p>
+                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por suscriberte! Pronto recibirás noticias exclusivas.')">
+                    <input type="email" placeholder="Tu correo electrónico" required>
+                    <button type="submit">📩 Suscribirse</button>
+                </form>
+                <p class="newsletter-note">No compartimos tu email con nadie. Solo actualizaciones de La Guarida.</p>
             </div>
         </div>
     </section>
