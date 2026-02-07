@@ -63,6 +63,25 @@
         .section-content h3 { font-size: 32px; margin-bottom: 20px; color: #f1f5f9; font-weight: 700; }
         .section-content p { font-size: 16px; color: #cbd5e1; margin-bottom: 20px; line-height: 1.8; }
         
+        /* Clips Grid */
+        .clips-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .clip-card { background: linear-gradient(135deg, rgba(168, 139, 250, 0.05), rgba(96, 165, 250, 0.05)); border: 1px solid rgba(168, 139, 250, 0.2); border-radius: 12px; overflow: hidden; transition: all 0.3s; }
+        .clip-card:hover { transform: translateY(-8px); border-color: rgba(168, 139, 250, 0.5); box-shadow: 0 20px 40px rgba(168, 139, 250, 0.15); }
+        .clip-thumbnail { position: relative; width: 100%; padding-bottom: 56.25%; background: linear-gradient(135deg, rgba(168, 139, 250, 0.2), rgba(96, 165, 250, 0.2)); overflow: hidden; }
+        .clip-thumbnail a { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+        .clip-link { font-size: 48px; color: #a78bfa; transition: all 0.3s; }
+        .clip-link:hover { font-size: 56px; color: #60a5fa; }
+        .clip-card h3 { font-size: 20px; color: #f1f5f9; padding: 20px 20px 10px; font-weight: 600; }
+        .clip-card p { font-size: 14px; color: #cbd5e1; padding: 0 20px 20px; }
+        
+        /* Schedule Grid */
+        .schedule-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .schedule-card { background: linear-gradient(135deg, rgba(168, 139, 250, 0.1), rgba(96, 165, 250, 0.1)); border: 2px solid rgba(168, 139, 250, 0.3); border-radius: 12px; padding: 30px; text-align: center; transition: all 0.3s; }
+        .schedule-card:hover { border-color: rgba(168, 139, 250, 0.6); transform: translateY(-5px); box-shadow: 0 15px 35px rgba(168, 139, 250, 0.2); }
+        .schedule-day { font-size: 24px; font-weight: 700; color: #a78bfa; margin-bottom: 15px; }
+        .schedule-time { font-size: 18px; color: #f1f5f9; font-weight: 600; margin-bottom: 10px; }
+        .schedule-note { font-size: 14px; color: #94a3b8; }
+        
         /* Social */
         .social-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
         .social-btn { background: linear-gradient(135deg, rgba(168, 139, 250, 0.15), rgba(96, 165, 250, 0.1)); border: 1px solid rgba(168, 139, 250, 0.3); color: #a78bfa; padding: 15px 30px; border-radius: 8px; text-decoration: none; transition: all 0.3s; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; }
@@ -98,6 +117,8 @@
             <div class="logo"><i class="fas fa-gamepad"></i> J325</div>
             <div>
                 <a href="#especialidades">Especialidades</a>
+                <a href="#clips">Clips</a>
+                <a href="#horario">Horario</a>
                 <a href="#sobre-mi">Sobre Mí</a>
                 <a href="#comunidad">Comunidad</a>
                 <a href="https://www.twitch.tv/jalexy325" target="_blank" class="btn"><i class="fab fa-twitch"></i> Sígueme</a>
@@ -189,6 +210,79 @@
                     <p>En Minecraft, la creatividad no tiene límites. Desde construcciones épicas hasta aventuras de supervivencia, cada sesión es una nueva historia.</p>
                     <p>Construimos mundos, exploramos lo desconocido y creamos recuerdos inolvidables con nuestra comunidad.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clips -->
+    <section id="clips">
+        <div class="container">
+            <h2>🎬 Clips Destacados</h2>
+            <p style="text-align: center; color: #cbd5e1; margin-bottom: 50px; font-size: 18px;">Revisa los momentos más épicos y memorables de nuestros streams</p>
+            <div class="clips-grid">
+                <div class="clip-card">
+                    <div class="clip-thumbnail">
+                        <a href="https://www.twitch.tv/jalexy325/clip/SassyCarefulSaladDerp-cA0QnBJ42uABajOB" target="_blank" class="clip-link">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <h3>¡Vamos DaiZyujin!</h3>
+                    <p>Momento épico de Fortnite con increíble reacción</p>
+                    <a href="https://www.twitch.tv/jalexy325/clip/SassyCarefulSaladDerp-cA0QnBJ42uABajOB" target="_blank" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">Ver Clip</a>
+                </div>
+                <div class="clip-card">
+                    <div class="clip-thumbnail">
+                        <a href="https://www.twitch.tv/jalexy325/clip/PiercingCoweringSquirrelAMPTropPunch-2rdhRuLMU-Ky4Zak" target="_blank" class="clip-link">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <h3>Y luego dice que no le salen shinies</h3>
+                    <p>Minecraft - Momento hilarante con los shinies</p>
+                    <a href="https://www.twitch.tv/jalexy325/clip/PiercingCoweringSquirrelAMPTropPunch-2rdhRuLMU-Ky4Zak" target="_blank" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">Ver Clip</a>
+                </div>
+                <div class="clip-card">
+                    <div class="clip-thumbnail">
+                        <a href="https://www.twitch.tv/jalexy325/clip/SassyCarefulSaladDerp-cA0QnBJ42uABajOB" target="_blank" class="clip-link">
+                            <i class="fas fa-play"></i>
+                        </a>
+                    </div>
+                    <h3>El Shiny que no lo parece</h3>
+                    <p>Pokémon Nuzlocke - Momento de tensión pura</p>
+                    <a href="https://www.twitch.tv/jalexy325/clip/SassyCarefulSaladDerp-cA0QnBJ42uABajOB" target="_blank" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">Ver Clip</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horario de Streams -->
+    <section id="horario">
+        <div class="container">
+            <h2>📅 Horario de Streams</h2>
+            <p style="text-align: center; color: #cbd5e1; margin-bottom: 50px; font-size: 18px;">¡Sígueme en vivo! Aquí está mi horario de transmisiones</p>
+            <div class="schedule-grid">
+                <div class="schedule-card">
+                    <div class="schedule-day">🇪🇸 Colombia (COT)</div>
+                    <div class="schedule-time">Sábados 6:15 PM - 8:00 PM</div>
+                    <div class="schedule-note">Horario principal</div>
+                </div>
+                <div class="schedule-card">
+                    <div class="schedule-day">🌍 UTC</div>
+                    <div class="schedule-time">Sábados 11:15 PM - 1:00 AM</div>
+                    <div class="schedule-note">Hora universal</div>
+                </div>
+                <div class="schedule-card">
+                    <div class="schedule-day">🇺🇸 EST</div>
+                    <div class="schedule-time">Sábados 6:15 PM - 8:00 PM</div>
+                    <div class="schedule-note">Hora de Nueva York</div>
+                </div>
+                <div class="schedule-card">
+                    <div class="schedule-day">🇪🇺 CET</div>
+                    <div class="schedule-time">Domingos 12:15 AM - 2:00 AM</div>
+                    <div class="schedule-note">Hora de Europa Central</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="https://www.twitch.tv/jalexy325" target="_blank" class="btn" style="font-size: 18px; padding: 15px 40px;"><i class="fas fa-play-circle"></i> Ver en Vivo Ahora</a>
             </div>
         </div>
     </section>
