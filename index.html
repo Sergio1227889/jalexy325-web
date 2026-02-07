@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jalexy325 - Creador de Contenido</title>
+    <title>Jalexy325 - Streamer de Twitch | La Guarida</title>
+    <meta name="description" content="Jalexy325 - Streamer de Twitch especializado en Pokémon Nuzlocke, Minecraft y Fortnite. Únete a La Guarida, nuestra comunidad gaming.">
+    <meta name="keywords" content="Twitch, Streamer, Gaming, Pokémon, Nuzlocke, Minecraft, Fortnite, La Guarida">
+    <meta name="author" content="Jalexy325">
+    <meta property="og:title" content="Jalexy325 - Streamer de Twitch">
+    <meta property="og:description" content="Streamer de Twitch especializado en Pokémon Nuzlocke, Minecraft y Fortnite. Comunidad La Guarida.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="https://files.manuscdn.com/user_upload_by_module/session_file/310519663318260232/qChmYCiMKTgKLjEU.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -131,8 +138,21 @@
         .social-btn i { font-size: 20px; }
         
         /* Footer */
-        footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(168, 139, 250, 0.2); color: #94a3b8; }
-        footer p { margin: 10px 0; }
+        footer { background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.98)); border-top: 2px solid rgba(168, 139, 250, 0.2); padding: 60px 0 30px; margin-top: 100px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .footer-section h4 { font-size: 16px; color: #a78bfa; margin-bottom: 20px; font-weight: 700; }
+        .footer-section a { display: block; color: #cbd5e1; text-decoration: none; margin-bottom: 12px; transition: all 0.3s; font-size: 14px; }
+        .footer-section a:hover { color: #a78bfa; transform: translateX(5px); }
+        .footer-bottom { border-top: 1px solid rgba(168, 139, 250, 0.2); padding-top: 30px; text-align: center; }
+        .footer-bottom p { color: #94a3b8; font-size: 13px; margin: 5px 0; }
+        .footer-socials { display: flex; gap: 15px; justify-content: center; margin-top: 20px; }
+        .footer-socials a { display: inline-flex; width: 40px; height: 40px; align-items: center; justify-content: center; background: rgba(168, 139, 250, 0.1); border: 1px solid rgba(168, 139, 250, 0.3); border-radius: 50%; color: #a78bfa; transition: all 0.3s; margin: 0; }
+        .footer-socials a:hover { background: rgba(168, 139, 250, 0.2); transform: translateY(-3px); }
+        
+        /* Animaciones */
+        html { scroll-behavior: smooth; }
+        
+
         
         /* Animations */
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
@@ -538,8 +558,35 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Jalexy325. Todos los derechos reservados.</p>
-            <p style="margin-top: 10px; font-size: 14px;">La Guarida - Donde la diversión y la profesionalidad se encuentran</p>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4><i class="fas fa-gamepad"></i> Jalexy325</h4>
+                    <p style="color: #cbd5e1; font-size: 13px; margin-bottom: 15px;">Streamer de Twitch especializado en Pokémon, Minecraft y Fortnite. La Guarida es nuestra comunidad.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Navegación</h4>
+                    <a href="#especialidades">Especialidades</a>
+                    <a href="#clips">Clips</a>
+                    <a href="#horario">Horario</a>
+                    <a href="#eventos">Eventos</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Comunidad</h4>
+                    <a href="#empezar">Cómo Empezar</a>
+                    <a href="#sobre-mi">Sobre Mí</a>
+                    <a href="#comunidad">La Guarida</a>
+                    <a href="#soundtrack">Soundtrack</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-socials">
+                    <a href="https://www.twitch.tv/jalexy325" target="_blank" title="Twitch"><i class="fab fa-twitch"></i></a>
+                    <a href="https://www.tiktok.com/@jalexy_325" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.youtube.com/@jalexy325" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p>&copy; 2026 Jalexy325. Todos los derechos reservados.</p>
+                <p>La Guarida - Donde la diversión y la profesionalidad se encuentran</p>
+            </div>
         </div>
     </footer>
 </body>
