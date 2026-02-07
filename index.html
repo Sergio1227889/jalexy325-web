@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jalexy325 - Creador de Contenido</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #f1f5f9; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Navigation */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(168, 139, 250, 0.2); z-index: 1000; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo { font-size: 24px; font-weight: 700; background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        nav a { color: #f1f5f9; text-decoration: none; margin: 0 20px; transition: color 0.3s; }
+        nav a:hover { color: #a78bfa; }
+        .btn { background: linear-gradient(135deg, #a78bfa, #60a5fa); color: white; padding: 10px 25px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; transition: transform 0.3s; }
+        .btn:hover { transform: translateY(-2px); }
+        
+        /* Hero */
+        .hero { margin-top: 70px; padding: 100px 0; text-align: center; }
+        h1 { font-size: 56px; margin-bottom: 20px; background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .subtitle { font-size: 24px; color: #cbd5e1; margin-bottom: 40px; }
+        .hero-desc { font-size: 18px; color: #cbd5e1; max-width: 700px; margin: 0 auto 40px; }
+        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        
+        /* Stats */
+        .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 60px 0; }
+        .stat-card { background: rgba(168, 139, 250, 0.1); border: 1px solid rgba(168, 139, 250, 0.2); padding: 30px; border-radius: 12px; text-align: center; }
+        .stat-number { font-size: 32px; font-weight: 700; color: #a78bfa; }
+        .stat-label { color: #94a3b8; margin-top: 10px; }
+        
+        /* Sections */
+        section { padding: 80px 0; border-top: 1px solid rgba(168, 139, 250, 0.2); }
+        h2 { font-size: 40px; margin-bottom: 40px; background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        /* Cards */
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .card { background: rgba(168, 139, 250, 0.05); border: 1px solid rgba(168, 139, 250, 0.2); padding: 40px; border-radius: 12px; transition: all 0.3s; }
+        .card:hover { border-color: rgba(168, 139, 250, 0.5); transform: translateY(-5px); }
+        .card h3 { font-size: 22px; margin-bottom: 15px; color: #a78bfa; }
+        .card p { color: #cbd5e1; }
+        
+        /* Social */
+        .social-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .social-btn { background: rgba(168, 139, 250, 0.1); border: 1px solid rgba(168, 139, 250, 0.3); color: #a78bfa; padding: 15px 30px; border-radius: 8px; text-decoration: none; transition: all 0.3s; }
+        .social-btn:hover { background: rgba(168, 139, 250, 0.2); }
+        
+        /* Footer */
+        footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(168, 139, 250, 0.2); color: #94a3b8; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 36px; }
+            .subtitle { font-size: 18px; }
+            nav .container { flex-direction: column; height: auto; padding: 15px 0; }
+            nav a { margin: 5px 10px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">J325</div>
+            <div>
+                <a href="#especialidades">Especialidades</a>
+                <a href="#comunidad">Comunidad</a>
+                <a href="https://www.twitch.tv/jalexy325" target="_blank" class="btn">Sígueme</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Jalexy325</h1>
+            <p class="subtitle">Creador de Contenido | Pokémon Nuzlocke Specialist</p>
+            <p class="hero-desc">Bienvenido a La Guarida. Un espacio donde la diversión, la profesionalidad y la autenticidad se encuentran. Aquí creamos contenido de calidad, construimos comunidad y exploramos mundos de juegos con pasión.</p>
+            <div class="hero-buttons">
+                <a href="https://www.twitch.tv/jalexy325" target="_blank" class="btn">Ver en Vivo</a>
+                <a href="https://www.tiktok.com/@jalexy_325" target="_blank" class="btn" style="background: rgba(168, 139, 250, 0.2); border: 1px solid rgba(168, 139, 250, 0.5);">TikTok</a>
+            </div>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number">708</div>
+                    <div class="stat-label">Seguidores</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">La Guarida</div>
+                    <div class="stat-label">Comunidad</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">Chill</div>
+                    <div class="stat-label">Filosofía</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especialidades -->
+    <section id="especialidades">
+        <div class="container">
+            <h2>Especialidades</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>🏆 Pokémon Nuzlocke</h3>
+                    <p>Challenges intensos, estrategia pura y momentos épicos. Los Nuzlocke son mi pasión: cada decisión cuenta, cada Pokémon importa.</p>
+                </div>
+                <div class="card">
+                    <h3>⛏️ Minecraft</h3>
+                    <p>Construcciones épicas, aventuras sin fin y momentos de pura creatividad. Minecraft es libertad en su forma más pura.</p>
+                </div>
+                <div class="card">
+                    <h3>🎮 Fortnite</h3>
+                    <p>Acción, diversión y momentos memorables. Fortnite es donde nos relajamos y disfrutamos del gameplay puro.</p>
+                </div>
+                <div class="card">
+                    <h3>⭐ Fall Guys</h3>
+                    <p>Caos, risas y competencia amigable. Fall Guys es el juego perfecto para momentos de pura diversión sin presión.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comunidad -->
+    <section id="comunidad">
+        <div class="container">
+            <h2>La Guarida - Nuestra Comunidad</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>👥 Comunidad Respetuosa</h3>
+                    <p>Un espacio seguro donde todos son bienvenidos y la diversidad es celebrada.</p>
+                </div>
+                <div class="card">
+                    <h3>📈 Crecimiento Juntos</h3>
+                    <p>Apoyamos el crecimiento mutuo y la colaboración en cada paso del camino.</p>
+                </div>
+                <div class="card">
+                    <h3>✨ Momentos Especiales</h3>
+                    <p>Eventos, giveaways y experiencias únicas que crean recuerdos inolvidables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Redes Sociales -->
+    <section>
+        <div class="container" style="text-align: center;">
+            <h2>Sígueme en Mis Redes</h2>
+            <div class="social-links">
+                <a href="https://www.twitch.tv/jalexy325" target="_blank" class="social-btn">Twitch @jalexy325</a>
+                <a href="https://www.tiktok.com/@jalexy_325" target="_blank" class="social-btn">TikTok @jalexy_325</a>
+                <a href="https://www.youtube.com/@jalexy325" target="_blank" class="social-btn">YouTube @jalexy325</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Jalexy325. Todos los derechos reservados.</p>
+            <p style="margin-top: 10px; font-size: 14px;">La Guarida - Donde la diversión y la profesionalidad se encuentran</p>
+        </div>
+    </footer>
+</body>
+</html>
