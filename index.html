@@ -5,57 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jalexy325 - Creador de Contenido</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #f1f5f9; line-height: 1.6; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         
         /* Navigation */
-        nav { position: fixed; top: 0; width: 100%; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(168, 139, 250, 0.2); z-index: 1000; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(10px); border-bottom: 2px solid rgba(168, 139, 250, 0.3); z-index: 1000; }
         nav .container { display: flex; justify-content: space-between; align-items: center; height: 70px; }
-        .logo { font-size: 24px; font-weight: 700; background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        nav a { color: #f1f5f9; text-decoration: none; margin: 0 20px; transition: color 0.3s; }
-        nav a:hover { color: #a78bfa; }
-        .btn { background: linear-gradient(135deg, #a78bfa, #60a5fa); color: white; padding: 10px 25px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; transition: transform 0.3s; }
-        .btn:hover { transform: translateY(-2px); }
+        .logo { font-size: 28px; font-weight: 700; background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; display: flex; align-items: center; gap: 10px; }
+        .logo i { font-size: 32px; }
+        nav a { color: #f1f5f9; text-decoration: none; margin: 0 20px; transition: all 0.3s; font-weight: 500; }
+        nav a:hover { color: #a78bfa; transform: translateY(-2px); }
+        .btn { background: linear-gradient(135deg, #a78bfa, #60a5fa); color: white; padding: 12px 28px; border-radius: 8px; text-decoration: none; border: none; cursor: pointer; transition: all 0.3s; font-weight: 600; display: inline-flex; align-items: center; gap: 8px; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(168, 139, 250, 0.4); }
         
         /* Hero */
-        .hero { margin-top: 70px; padding: 100px 0; text-align: center; }
-        h1 { font-size: 56px; margin-bottom: 20px; background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .subtitle { font-size: 24px; color: #cbd5e1; margin-bottom: 40px; }
-        .hero-desc { font-size: 18px; color: #cbd5e1; max-width: 700px; margin: 0 auto 40px; }
-        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+        .hero { margin-top: 70px; padding: 100px 0; text-align: center; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(168, 139, 250, 0.1) 0%, transparent 70%); border-radius: 50%; }
+        .hero-content { position: relative; z-index: 1; }
+        h1 { font-size: 56px; margin-bottom: 20px; background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; }
+        .subtitle { font-size: 24px; color: #cbd5e1; margin-bottom: 40px; font-weight: 500; }
+        .hero-desc { font-size: 18px; color: #cbd5e1; max-width: 700px; margin: 0 auto 40px; line-height: 1.8; }
+        .hero-buttons { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 60px; }
+        
+        /* Hero Image */
+        .hero-image { margin: 60px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(168, 139, 250, 0.2); }
+        .hero-image img { width: 100%; height: auto; display: block; }
         
         /* Stats */
         .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 60px 0; }
-        .stat-card { background: rgba(168, 139, 250, 0.1); border: 1px solid rgba(168, 139, 250, 0.2); padding: 30px; border-radius: 12px; text-align: center; }
+        .stat-card { background: linear-gradient(135deg, rgba(168, 139, 250, 0.15), rgba(96, 165, 250, 0.1)); border: 1px solid rgba(168, 139, 250, 0.3); padding: 30px; border-radius: 12px; text-align: center; transition: all 0.3s; }
+        .stat-card:hover { transform: translateY(-5px); border-color: rgba(168, 139, 250, 0.6); }
+        .stat-icon { font-size: 40px; color: #a78bfa; margin-bottom: 15px; }
         .stat-number { font-size: 32px; font-weight: 700; color: #a78bfa; }
         .stat-label { color: #94a3b8; margin-top: 10px; }
         
         /* Sections */
         section { padding: 80px 0; border-top: 1px solid rgba(168, 139, 250, 0.2); }
-        h2 { font-size: 40px; margin-bottom: 40px; background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h2 { font-size: 40px; margin-bottom: 50px; background: linear-gradient(135deg, #a78bfa, #60a5fa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 700; text-align: center; }
         
         /* Cards */
-        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: rgba(168, 139, 250, 0.05); border: 1px solid rgba(168, 139, 250, 0.2); padding: 40px; border-radius: 12px; transition: all 0.3s; }
-        .card:hover { border-color: rgba(168, 139, 250, 0.5); transform: translateY(-5px); }
-        .card h3 { font-size: 22px; margin-bottom: 15px; color: #a78bfa; }
-        .card p { color: #cbd5e1; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .card { background: linear-gradient(135deg, rgba(168, 139, 250, 0.05), rgba(96, 165, 250, 0.05)); border: 1px solid rgba(168, 139, 250, 0.2); padding: 40px; border-radius: 12px; transition: all 0.3s; position: relative; overflow: hidden; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #a78bfa, #60a5fa); transform: scaleX(0); transition: transform 0.3s; }
+        .card:hover { border-color: rgba(168, 139, 250, 0.5); transform: translateY(-8px); box-shadow: 0 20px 40px rgba(168, 139, 250, 0.15); }
+        .card:hover::before { transform: scaleX(1); }
+        .card-icon { font-size: 48px; color: #a78bfa; margin-bottom: 20px; }
+        .card h3 { font-size: 22px; margin-bottom: 15px; color: #f1f5f9; font-weight: 600; }
+        .card p { color: #cbd5e1; line-height: 1.8; }
+        
+        /* Section with Image */
+        .section-with-image { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; margin: 60px 0; }
+        .section-image { border-radius: 12px; overflow: hidden; box-shadow: 0 20px 60px rgba(168, 139, 250, 0.2); }
+        .section-image img { width: 100%; height: auto; display: block; }
+        .section-content h3 { font-size: 32px; margin-bottom: 20px; color: #f1f5f9; font-weight: 700; }
+        .section-content p { font-size: 16px; color: #cbd5e1; margin-bottom: 20px; line-height: 1.8; }
         
         /* Social */
         .social-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
-        .social-btn { background: rgba(168, 139, 250, 0.1); border: 1px solid rgba(168, 139, 250, 0.3); color: #a78bfa; padding: 15px 30px; border-radius: 8px; text-decoration: none; transition: all 0.3s; }
-        .social-btn:hover { background: rgba(168, 139, 250, 0.2); }
+        .social-btn { background: linear-gradient(135deg, rgba(168, 139, 250, 0.15), rgba(96, 165, 250, 0.1)); border: 1px solid rgba(168, 139, 250, 0.3); color: #a78bfa; padding: 15px 30px; border-radius: 8px; text-decoration: none; transition: all 0.3s; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; }
+        .social-btn:hover { background: linear-gradient(135deg, rgba(168, 139, 250, 0.25), rgba(96, 165, 250, 0.2)); transform: translateY(-3px); }
+        .social-btn i { font-size: 20px; }
         
         /* Footer */
         footer { text-align: center; padding: 40px 0; border-top: 1px solid rgba(168, 139, 250, 0.2); color: #94a3b8; }
+        footer p { margin: 10px 0; }
+        
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .card, .stat-card { animation: fadeInUp 0.6s ease-out forwards; }
+        .card:nth-child(2) { animation-delay: 0.1s; }
+        .card:nth-child(3) { animation-delay: 0.2s; }
+        .card:nth-child(4) { animation-delay: 0.3s; }
         
         @media (max-width: 768px) {
             h1 { font-size: 36px; }
             .subtitle { font-size: 18px; }
             nav .container { flex-direction: column; height: auto; padding: 15px 0; }
             nav a { margin: 5px 10px; }
+            .section-with-image { grid-template-columns: 1fr; gap: 30px; }
+            .hero-buttons { flex-direction: column; }
+            .btn { width: 100%; justify-content: center; }
         }
     </style>
 </head>
@@ -63,11 +95,11 @@
     <!-- Navigation -->
     <nav>
         <div class="container">
-            <div class="logo">J325</div>
+            <div class="logo"><i class="fas fa-gamepad"></i> J325</div>
             <div>
                 <a href="#especialidades">Especialidades</a>
                 <a href="#comunidad">Comunidad</a>
-                <a href="https://www.twitch.tv/jalexy325" target="_blank" class="btn">Sígueme</a>
+                <a href="https://www.twitch.tv/jalexy325" target="_blank" class="btn"><i class="fab fa-twitch"></i> Sígueme</a>
             </div>
         </div>
     </nav>
@@ -75,25 +107,33 @@
     <!-- Hero -->
     <section class="hero">
         <div class="container">
-            <h1>Jalexy325</h1>
-            <p class="subtitle">Creador de Contenido | Pokémon Nuzlocke Specialist</p>
-            <p class="hero-desc">Bienvenido a La Guarida. Un espacio donde la diversión, la profesionalidad y la autenticidad se encuentran. Aquí creamos contenido de calidad, construimos comunidad y exploramos mundos de juegos con pasión.</p>
-            <div class="hero-buttons">
-                <a href="https://www.twitch.tv/jalexy325" target="_blank" class="btn">Ver en Vivo</a>
-                <a href="https://www.tiktok.com/@jalexy_325" target="_blank" class="btn" style="background: rgba(168, 139, 250, 0.2); border: 1px solid rgba(168, 139, 250, 0.5);">TikTok</a>
-            </div>
-            <div class="stats">
-                <div class="stat-card">
-                    <div class="stat-number">708</div>
-                    <div class="stat-label">Seguidores</div>
+            <div class="hero-content">
+                <h1>Jalexy325</h1>
+                <p class="subtitle">🎮 Creador de Contenido | Pokémon Nuzlocke Specialist</p>
+                <p class="hero-desc">Bienvenido a La Guarida. Un espacio donde la diversión, la profesionalidad y la autenticidad se encuentran. Aquí creamos contenido de calidad, construimos comunidad y exploramos mundos de juegos con pasión.</p>
+                <div class="hero-buttons">
+                    <a href="https://www.twitch.tv/jalexy325" target="_blank" class="btn"><i class="fab fa-twitch"></i> Ver en Vivo</a>
+                    <a href="https://www.tiktok.com/@jalexy_325" target="_blank" class="btn" style="background: rgba(168, 139, 250, 0.2); border: 1px solid rgba(168, 139, 250, 0.5);"><i class="fab fa-tiktok"></i> TikTok</a>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">La Guarida</div>
-                    <div class="stat-label">Comunidad</div>
+                <div class="hero-image">
+                    <img src="https://private-us-east-1.manuscdn.com/sessionFile/iIb9omfGIo39UAf2seoP6b/sandbox/EWxEfLF9FP6CNrSY8BqKTb-img-1_1770439803000_na1fn_amFsZXh5X2hlcm9fZ2FtaW5n.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80" alt="Gaming Setup">
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">Chill</div>
-                    <div class="stat-label">Filosofía</div>
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-number">708</div>
+                        <div class="stat-label">Seguidores</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-heart"></i></div>
+                        <div class="stat-number">La Guarida</div>
+                        <div class="stat-label">Comunidad</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon"><i class="fas fa-star"></i></div>
+                        <div class="stat-number">Chill</div>
+                        <div class="stat-label">Filosofía</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,20 +145,48 @@
             <h2>Especialidades</h2>
             <div class="cards">
                 <div class="card">
+                    <div class="card-icon"><i class="fas fa-crown"></i></div>
                     <h3>🏆 Pokémon Nuzlocke</h3>
                     <p>Challenges intensos, estrategia pura y momentos épicos. Los Nuzlocke son mi pasión: cada decisión cuenta, cada Pokémon importa.</p>
                 </div>
                 <div class="card">
+                    <div class="card-icon"><i class="fas fa-cube"></i></div>
                     <h3>⛏️ Minecraft</h3>
                     <p>Construcciones épicas, aventuras sin fin y momentos de pura creatividad. Minecraft es libertad en su forma más pura.</p>
                 </div>
                 <div class="card">
+                    <div class="card-icon"><i class="fas fa-crosshairs"></i></div>
                     <h3>🎮 Fortnite</h3>
                     <p>Acción, diversión y momentos memorables. Fortnite es donde nos relajamos y disfrutamos del gameplay puro.</p>
                 </div>
                 <div class="card">
+                    <div class="card-icon"><i class="fas fa-person-running"></i></div>
                     <h3>⭐ Fall Guys</h3>
                     <p>Caos, risas y competencia amigable. Fall Guys es el juego perfecto para momentos de pura diversión sin presión.</p>
+                </div>
+            </div>
+
+            <!-- Pokémon Section with Image -->
+            <div class="section-with-image" style="margin-top: 80px;">
+                <div class="section-image">
+                    <img src="https://private-us-east-1.manuscdn.com/sessionFile/iIb9omfGIo39UAf2seoP6b/sandbox/EWxEfLF9FP6CNrSY8BqKTb-img-2_1770439804000_na1fn_amFsZXh5X3Bva2Vtb25fbnV6bG9ja2U.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80" alt="Pokémon Nuzlocke">
+                </div>
+                <div class="section-content">
+                    <h3>Nuzlocke Challenges</h3>
+                    <p>Los Nuzlocke son desafíos estratégicos donde cada Pokémon capturado se vuelve valioso. Cuando uno cae, cae para siempre. Es donde la tensión, la emoción y la adrenalina se encuentran.</p>
+                    <p>Cada batalla es crucial, cada decisión importa, y cada victoria es épica.</p>
+                </div>
+            </div>
+
+            <!-- Minecraft Section with Image -->
+            <div class="section-with-image" style="margin-top: 80px; direction: rtl;">
+                <div class="section-image">
+                    <img src="https://private-us-east-1.manuscdn.com/sessionFile/iIb9omfGIo39UAf2seoP6b/sandbox/EWxEfLF9FP6CNrSY8BqKTb-img-3_1770439803000_na1fn_amFsZXh5X21pbmVjcmFmdF9jcmVhdGl2ZQ.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80" alt="Minecraft Creativo">
+                </div>
+                <div class="section-content" style="direction: ltr;">
+                    <h3>Minecraft Creativo</h3>
+                    <p>En Minecraft, la creatividad no tiene límites. Desde construcciones épicas hasta aventuras de supervivencia, cada sesión es una nueva historia.</p>
+                    <p>Construimos mundos, exploramos lo desconocido y creamos recuerdos inolvidables.</p>
                 </div>
             </div>
         </div>
@@ -130,17 +198,25 @@
             <h2>La Guarida - Nuestra Comunidad</h2>
             <div class="cards">
                 <div class="card">
+                    <div class="card-icon"><i class="fas fa-handshake"></i></div>
                     <h3>👥 Comunidad Respetuosa</h3>
-                    <p>Un espacio seguro donde todos son bienvenidos y la diversidad es celebrada.</p>
+                    <p>Un espacio seguro donde todos son bienvenidos y la diversidad es celebrada. Aquí no hay lugar para la toxicidad.</p>
                 </div>
                 <div class="card">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
                     <h3>📈 Crecimiento Juntos</h3>
-                    <p>Apoyamos el crecimiento mutuo y la colaboración en cada paso del camino.</p>
+                    <p>Apoyamos el crecimiento mutuo y la colaboración en cada paso del camino. Tu éxito es nuestro éxito.</p>
                 </div>
                 <div class="card">
+                    <div class="card-icon"><i class="fas fa-sparkles"></i></div>
                     <h3>✨ Momentos Especiales</h3>
-                    <p>Eventos, giveaways y experiencias únicas que crean recuerdos inolvidables.</p>
+                    <p>Eventos, giveaways y experiencias únicas que crean recuerdos inolvidables. Cada día es una oportunidad.</p>
                 </div>
+            </div>
+
+            <!-- Community Image -->
+            <div class="hero-image" style="margin-top: 80px;">
+                <img src="https://private-us-east-1.manuscdn.com/sessionFile/iIb9omfGIo39UAf2seoP6b/sandbox/EWxEfLF9FP6CNrSY8BqKTb-img-4_1770439806000_na1fn_amFsZXh5X2NvbW11bml0eQ.png?x-oss-process=image/resize,w_1920,h_1920/format,webp/quality,q_80" alt="Comunidad Gaming">
             </div>
         </div>
     </section>
@@ -150,9 +226,9 @@
         <div class="container" style="text-align: center;">
             <h2>Sígueme en Mis Redes</h2>
             <div class="social-links">
-                <a href="https://www.twitch.tv/jalexy325" target="_blank" class="social-btn">Twitch @jalexy325</a>
-                <a href="https://www.tiktok.com/@jalexy_325" target="_blank" class="social-btn">TikTok @jalexy_325</a>
-                <a href="https://www.youtube.com/@jalexy325" target="_blank" class="social-btn">YouTube @jalexy325</a>
+                <a href="https://www.twitch.tv/jalexy325" target="_blank" class="social-btn"><i class="fab fa-twitch"></i> Twitch @jalexy325</a>
+                <a href="https://www.tiktok.com/@jalexy_325" target="_blank" class="social-btn"><i class="fab fa-tiktok"></i> TikTok @jalexy_325</a>
+                <a href="https://www.youtube.com/@jalexy325" target="_blank" class="social-btn"><i class="fab fa-youtube"></i> YouTube @jalexy325</a>
             </div>
         </div>
     </section>
